@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const arr=[{ name: "Rachel", age: 20 },
+                   { name: "Jennifer", age: 45 },
+                   { name: "Jack", age: 43 },
+                   { name: "Maria", age: 3 }
+                ];
+        function ageMembers(array){
+            const result=[];
+            const ages=[];
+            array.forEach(agePicking);
+            function agePicking(value){
+                return ages.push(value.age);
+            }
+            result.push(Math.min.apply(null,ages));
+            result.push(Math.max.apply(null,ages));
+            result.push(Math.max.apply(null,ages)-Math.min.apply(null,ages));
+            return result;
+        }
+        document.write(ageMembers(arr));
+
+    </script>
+</body>
+</html>
